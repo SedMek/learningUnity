@@ -13,10 +13,8 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKey("w"))
-        {
-            rb.AddForce(0, 0, forwardStep * Time.fixedDeltaTime, ForceMode.VelocityChange);
-        }
+        rb.AddForce(0, 0, forwardStep * Time.fixedDeltaTime, ForceMode.VelocityChange);
+
         if (Input.GetKey("s"))
         {
             rb.AddForce(0, 0, -forwardStep * Time.fixedDeltaTime, ForceMode.VelocityChange);
@@ -26,7 +24,7 @@ public class playerMovement : MonoBehaviour
         {
             rb.AddForce(0, sideStep * Time.fixedDeltaTime, 0, ForceMode.VelocityChange);
         }
-        if (Input.GetKey("a"))
+        if (Input.GetKey("q"))
         {
             rb.AddForce(-sideStep * Time.fixedDeltaTime, 0, 0, ForceMode.VelocityChange);
         }
