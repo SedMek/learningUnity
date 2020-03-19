@@ -4,6 +4,7 @@ public class gameManager : MonoBehaviour
 {
     bool gameHasEnded = false;
     float restartDelay = 2;
+    public GameObject levelCompletePanel;
     public score scoreText;
     public void endGame()
     {
@@ -19,5 +20,15 @@ public class gameManager : MonoBehaviour
     void restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void completeLevel()
+    {
+        if (!gameHasEnded)
+        {
+            levelCompletePanel.SetActive(true);
+            scoreText.enabled = false;
+            gameHasEnded = true;
+        }
     }
 }
