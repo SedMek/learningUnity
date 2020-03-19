@@ -1725,13 +1725,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.013700354, y: -0, z: -0, w: 0.9999062}
-  m_LocalPosition: {x: 192, y: 275.07, z: -10.37}
+  m_LocalRotation: {x: 0.056184847, y: -0, z: -0, w: 0.9984204}
+  m_LocalPosition: {x: 192, y: 275.7, z: -8.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 1.57, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 6.4420004, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1745,7 +1745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1856771049}
-  offset: {x: 0, y: 1, z: -10}
+  offset: {x: 0, y: 1.7, z: -8.5}
 --- !u!4 &981611542 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3581982185636593214, guid: 93a73e4531c0809bea477b17ddb86d5d,
@@ -2973,7 +2973,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1856771045}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1

@@ -9,5 +9,6 @@ public class followPlayer : MonoBehaviour
     void Update()
     {
         transform.position = player.position + offset;
+        // transform.LookAt(player);
     }
 }
