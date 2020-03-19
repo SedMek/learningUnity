@@ -13,6 +13,8 @@ public class playerCollision : MonoBehaviour
             Debug.Log(collisionInfo.collider.tag);
             movement.enabled = false;
             rb.useGravity = false;
+            FindObjectOfType<gameManager>().endGame();
+
         }
     }
 }

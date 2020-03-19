@@ -33,5 +33,9 @@ public class playerMovement : MonoBehaviour
             rb.AddForce(sideStep * Time.fixedDeltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
+        if (rb.position.y < 272)
+        {
+            FindObjectOfType<gameManager>().endGame();
+        }
     }
 }
