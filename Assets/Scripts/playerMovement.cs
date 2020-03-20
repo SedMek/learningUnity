@@ -7,12 +7,11 @@ public class playerMovement : MonoBehaviour
     public float sideStep = 20f;
     public Rigidbody rb;
 
-
+    public Animator animator;
     // Update is called once per frame
     void FixedUpdate()
     {
         rb.AddForce(0, 0, forwardStep * Time.fixedDeltaTime, ForceMode.VelocityChange);
-
         if (Input.GetKey("s"))
         {
             rb.AddForce(0, 0, -forwardStep * Time.fixedDeltaTime, ForceMode.VelocityChange);
@@ -21,6 +20,7 @@ public class playerMovement : MonoBehaviour
         if (Input.GetKey("space"))
         {
             rb.AddForce(0, sideStep * Time.fixedDeltaTime, 0, ForceMode.VelocityChange);
+            animator.SetTrigger("player rotate");
         }
         if (Input.GetKey("q"))
         {

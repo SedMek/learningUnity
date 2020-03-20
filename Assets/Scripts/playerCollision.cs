@@ -5,6 +5,13 @@ public class playerCollision : MonoBehaviour
     public playerMovement movement;
 
     public Rigidbody rb;
+    Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     // Start is called before the first frame update
     void OnCollisionEnter(Collision collisionInfo)
     {
@@ -12,6 +19,7 @@ public class playerCollision : MonoBehaviour
         {
             Debug.Log(collisionInfo.collider.tag);
             movement.enabled = false;
+            animator.enabled = false;
             rb.useGravity = false;
             FindObjectOfType<gameManager>().endGame();
 
