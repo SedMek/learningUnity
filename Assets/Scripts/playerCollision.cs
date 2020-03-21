@@ -20,6 +20,7 @@ public class playerCollision : MonoBehaviour
             Debug.Log(collisionInfo.collider.tag);
             movement.enabled = false;
             animator.enabled = false;
+            rb.constraints = RigidbodyConstraints.None;
             rb.useGravity = false;
             FindObjectOfType<gameManager>().endGame();
 
