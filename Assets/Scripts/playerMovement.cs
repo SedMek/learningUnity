@@ -12,21 +12,21 @@ public class playerMovement : MonoBehaviour
     void FixedUpdate()
     {
         rb.AddForce(0, 0, forwardStep * Time.fixedDeltaTime, ForceMode.VelocityChange);
-        if (Input.GetKey("s"))
+        if (Input.GetKey(KeyCode.S))
         {
             rb.AddForce(0, 0, -forwardStep * Time.fixedDeltaTime, ForceMode.VelocityChange);
         }
 
-        if (Input.GetKey("space"))
+        if (Input.GetKey(KeyCode.Space))
         {
             rb.AddForce(0, sideStep * Time.fixedDeltaTime, 0, ForceMode.VelocityChange);
             animator.SetTrigger("player rotate");
         }
-        if (Input.GetKey("q"))
+        if (Input.GetKey(KeyCode.Q))
         {
             rb.AddForce(-sideStep * Time.fixedDeltaTime, 0, 0, ForceMode.VelocityChange);
         }
-        if (Input.GetKey("d"))
+        if (Input.GetKey(KeyCode.D))
         {
             rb.AddForce(sideStep * Time.fixedDeltaTime, 0, 0, ForceMode.VelocityChange);
         }

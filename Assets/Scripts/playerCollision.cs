@@ -3,7 +3,7 @@
 public class playerCollision : MonoBehaviour
 {
     public playerMovement movement;
-
+    public playerDash dash;
     public Rigidbody rb;
     Animator animator;
 
@@ -19,6 +19,7 @@ public class playerCollision : MonoBehaviour
         {
             Debug.Log(collisionInfo.collider.tag);
             movement.enabled = false;
+            dash.enabled = false;
             animator.enabled = false;
             rb.constraints = RigidbodyConstraints.None;
             rb.useGravity = false;
