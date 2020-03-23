@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 public class handleChoice : MonoBehaviour
 {
-
-    public Light ambientLight;
+    public GameObject deadEnd;
     private void OnTriggerEnter()
     {
-        
+        deadEnd.SetActive(false);
     }
 
 }
